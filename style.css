@@ -1,1 +1,511 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Playfair Display', serif;
+}
 
+body {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    padding: 20px 5%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    background-color: #e0e0e0;
+    box-shadow: 0 0 14px rgba(0,0green,0blue, 0.3);
+}
+.menu-btn{
+    color: #424144;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.navbar .logo h1{
+    color:#424144;
+    border-bottom: 4px solid red;
+    
+}
+.navbar .menu li {
+    list-style: none;
+    display:inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: #424144;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu a i {
+    font-size: 24px; 
+}
+.navbar .menu li .active{
+    border-bottom: 4pxc solid red;
+}
+.navbar .menu li a i{
+    color: black;
+    padding-left: 20px;
+}
+.navbar .menu li a:hover{
+    border-bottom: 4px solid red;
+}
+.content {
+    background-image: url("girls-shopping-png-hd-transparent-girls-shopping-hdpng-images-girl-shopping-png-image-1133_1161-removebg-preview.png");
+    background-size: contain; 
+    background-color: #e0e0e0;
+    background-repeat: no-repeat;
+    background-position: right center; 
+    padding: 10px 5px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #424144;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 40pt;
+}
+.content p {
+    font-size: 35px;
+    color: black;
+}
+.shop-btn {
+  background-color: red; 
+  color: white; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-left: 20px; 
+  margin-top: 10px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  padding: 15px 15px;
+  transition: background-color 0.3s ease;
+  transform: scale(1.2);
+}
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: bold;
+    color: black;
+}
+.shop-btn:hover {
+    background-color: #e0343a;
+}
+.pheading {
+    text-align:center;
+    margin: 50px 0;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.sec{
+    padding: 10px 5%;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.sec {
+    padding: 10px 5%;
+}
+
+.products .card {
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    position: relative;
+}
+
+.products .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); 
+}
+
+.products .card .img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.products .card .img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.products .card .desc {
+    padding: 5px 20px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.products .card .title {
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.products .card .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.products .card .box .price {
+    position: absolute;
+    bottom: 10px;
+    left: 50%; 
+    transform: translateX(-50%);
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.products .card .box .btn {
+    font-size: 15px;
+    color: #f63e4e;
+    padding: 10px 10px; 
+    font-weight: bold;
+    border: 1px solid #f63e4e;
+    border-radius: 20px;
+    background-color: transparent; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.products .card .box .btn:hover {
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
+}
+.card .box .btn.add-to-cart-btn {
+    font-size: 15px;
+    color: #007bff;
+    padding: 10px 10px;
+    font-weight: bold;
+    border: 1px solid #007bff;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+.card .box .btn.add-to-cart-btn:hover {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    margin: 0 15px; 
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.social-icon:hover {
+    color: #007bff;  
+    transform: scale(1.2); 
+}
+
+.social-icon i {
+    transition: transform 0.3s;
+}
+
+.social-icon:hover i {
+    transform: rotate(15deg);
+}
+.about-section {
+    background-color: #e0e0e0;
+    padding: 50px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .about-image {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(1px 1px 20px blue);
+  }
+  .about-container {
+    flex: 2;
+    color: #424144;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+  
+  .about-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .contact-section {
+    background-color: #fafafa;
+    padding: 50px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .contact-container {
+    flex: 2;
+    color: #424144;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  
+  .contact-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .contact-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contact-container a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  .site-footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+  }
+  
+  .site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer-col {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footer-col h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #f1f1f1;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #bbb;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #bbb;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: black;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+  }
+  button {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: hsl(255deg 50% 40%);
+    border: solid 4px hsl(0, 11%, 11%);
+    font-family: inherit;
+   }
+   
+   .default-btn,.hover-btn {
+    background-color: hsl(255deg 50% 40%);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s ease;
+   }
+   
+   .hover-btn {
+    position: absolute;
+    inset: 0;
+    background-color: hsl(255deg 50% 49%);
+    transform: translate(0%,100%);
+   }
+   
+   .default-btn span {
+    color: hsl(0, 0%, 100%);
+   }
+   
+   .hover-btn span {
+    color: hsl(50deg 100% 50%);
+   }
+   
+   button:hover .default-btn {
+    transform: translate(0%,-100%);
+   }
+   
+   button:hover .hover-btn {
+    transform: translate(0%,0%);
+   }
+   .discount {
+    position: relative;
+  }
+  
+  .discount-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
